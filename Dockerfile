@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11:jdk-11.0.8_10-slim
+FROM eclipse-temurin:17
 RUN useradd -u 101 alpha
 RUN mkdir -p /home/alpha/app && chown -R alpha:alpha /home/alpha/app
 WORKDIR /home/alpha/app
