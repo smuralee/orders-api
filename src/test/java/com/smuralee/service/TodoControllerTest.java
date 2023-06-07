@@ -57,7 +57,7 @@ class TodoControllerTest {
         when(repository.findAll()).thenReturn(todoList);
 
         this.mockMvc.perform(
-                MockMvcRequestBuilders.get("/todos/")
+                MockMvcRequestBuilders.get("/todos")
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON)
         )
@@ -115,7 +115,7 @@ class TodoControllerTest {
         when(repository.save(Mockito.any(Todo.class))).thenReturn(response);
 
         this.mockMvc.perform(
-                MockMvcRequestBuilders.post("/todos/")
+                MockMvcRequestBuilders.post("/todos")
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON)
                         .content(mapper.writeValueAsString(payload))
