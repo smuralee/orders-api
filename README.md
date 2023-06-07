@@ -12,6 +12,6 @@ mvn package
 ## Push image to container registry
 
 ```shell
-docker build -t smuralee/todos-api:latest .
-docker push smuralee/todos-api:latest
+docker build -t todos-api:latest .
+docker push todos-api:latest
 ```
